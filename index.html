@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center my-5">
+      <div style="width: 70%">
+        <h1>Bài 1: Bảng tính điểm tổng kết</h1>
+        <form>
+          <div class="card">
+            <div class="card-body">
+              <div class="mb-3">
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <label for="class__A" class="form-label">Môn thi A</label>
+                    <input
+                      type="text"
+                      class="form-control number__only"
+                      placeholder="Điểm môn A"
+                      id="class__A"
+                    />
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="class__B" class="form-label">Môn thi B</label>
+                    <input
+                      type="text"
+                      class="form-control number__only"
+                      placeholder="Điểm môn B"
+                      id="class__B"
+                    />
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="class__C" class="form-label">Môn thi C</label>
+                    <input
+                      type="text"
+                      class="form-control number__only"
+                      placeholder="Điểm môn C"
+                      id="class__C"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="standard-score" class="form-label"
+                  >Điểm chuẩn</label
+                >
+                <input
+                  type="text"
+                  class="form-control number__only"
+                  placeholder="Nhập vào điểm chuẩn"
+                  id="standard-score"
+                />
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="priority-area" class="form-label"
+                    >Khu vực ưu tiên</label
+                  >
+                  <select
+                    name="priority-area"
+                    class="form-select"
+                    id="priority-area"
+                  >
+                    <option selected>--Chọn khu vực ưu tiên--</option>
+                    <option value="2">Khu vực A</option>
+                    <option value="1">Khu vực B</option>
+                    <option value="0.5">Khu vực C</option>
+                    <option value="0">X (Không được ưu tiên)</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="priority-group" class="form-label"
+                    >Đối tượng ưu tiên</label
+                  >
+                  <select
+                    name="priority-group"
+                    class="form-select"
+                    id="priority-group"
+                  >
+                    <option selected>--Chọn đối tượng ưu tiên--</option>
+                    <option value="2.5">Đối tượng 1</option>
+                    <option value="1.5">Đối tượng 2</option>
+                    <option value="1">Đối tượng 3</option>
+                    <option value="0">0 (Không được ưu tiên)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-success" id="button">
+                  Xét tuyển
+                </button>
+              </div>
+            </div>
+            <div class="card-footer alert alert-success">
+              <div class="totalScore">Điểm tổng kết của bạn là:</div>
+              <div class="result">Kết quả:</div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center my-5">
+      <div style="width: 70%">
+        <h1>Bài 2: Thông tin tiêu thụ điện</h1>
+        <form>
+          <div class="card">
+            <div class="card-body">
+              <div class="mb-3">
+                <label for="standard-score" class="form-label">Họ và tên</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nhập vào tên của bạn"
+                  id="standard-score"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="standard-score" class="form-label kw"
+                  >Số kw tiêu thụ</label
+                >
+                <input
+                  type="text"
+                  class="form-control number__only"
+                  placeholder="nhập vào số kw bạn đã tiêu thụ trong tháng này"
+                  id="standard-score"
+                />
+              </div>
+              <div class="d-flex justify-content-end">
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  id="buttonElectric"
+                >
+                  Tính tiền điện
+                </button>
+              </div>
+            </div>
+            <div class="card-footer alert alert-success">
+              <div class="totalHour">
+                Giá tiền điện theo giờ của bạn (kw/h):
+              </div>
+              <div class="totalMoney">Tổng tiền cần thanh toán tháng này:</div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center my-5">
+      <div style="width: 70%">
+        <h1>Bài 3: Thuế thu nhập cá nhân</h1>
+        <form>
+          <div class="card">
+            <div class="card-body">
+              <div class="mb-3">
+                <label for="standard-score" class="form-label">Họ và tên</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nhập vào tên của bạn"
+                  id="standard-score"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="standard-score" class="form-label"
+                  >Tổng thu nhập năm</label
+                >
+                <input
+                  type="text"
+                  class="form-control number__only"
+                  placeholder="Nhập vào thu nhập hàng năm"
+                  id="standard-score"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="standard-score" class="form-label"
+                  >Số người phụ thuộc</label
+                >
+                <input
+                  type="text"
+                  class="form-control number__only2"
+                  placeholder="Nhập vào số người phụ thuộc"
+                  id="standard-score"
+                />
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-success" id="buttonTTCN">
+                  Tính thuế TNCN
+                </button>
+              </div>
+            </div>
+            <div class="card-footer alert alert-success">
+              <div class="totalHour">Thu nhập chịu thuế của bạn là:</div>
+              <div class="totalPercent">TTCN:</div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center my-5">
+      <div style="width: 70%">
+        <h1>Bài 4: Tính tiền cáp</h1>
+        <form>
+          <div class="card">
+            <div class="card-body">
+              <div class="mb-3">
+                <label for="standard-score" class="form-label">Họ và tên</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nhập vào Họ tên của bạn"
+                  id="standard-score"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="standard-score" class="form-label"
+                  >Mã khách hàng</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nhập vào mã khách hàng"
+                  id="standard-score"
+                />
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="priority-area" class="form-label"
+                    >Loại khách hàng</label
+                  >
+                  <select
+                    name="priority-area"
+                    class="form-select"
+                    id="priority-area"
+                  >
+                    <option selected>--Chọn loại khách hàng--</option>
+                    <option value="0">Nhà dân</option>
+                    <option value="1">Doanh nghiệp</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <div class="col-6">
+                  <label for="standard-score" class="form-label"
+                    >Số kênh cao cấp</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control number__only2"
+                    placeholder="Nhập vào số kênh cao cấp"
+                    id="standard-score"
+                  />
+                  </div>
+                <div class="col-6">
+                  <label for="standard-score" class="form-label"
+                    >Số kết nối</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control number__only2"
+                    placeholder="Nhập vào số kết nối"
+                    id="standard-score"
+                  />
+                </div>
+              </div>
+                <div class="d-flex justify-content-end mb-3">
+                  <button type="button" class="btn btn-success" id="buttonTTCN">
+                    Tính tiền cáp
+                  </button>
+                </div>
+           
+            <div class="card-footer alert alert-success">
+              <div class="totalService">Giá tiền cáp của bạn là :</div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
